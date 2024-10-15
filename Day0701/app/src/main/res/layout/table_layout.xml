@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+        <TextView
+            android:text="주소"
+            ></TextView>
+        <TextView
+            android:text="전주시 완산구"
+            android:background="#00ffff"
+            >
+        </TextView>
+        <TextView
+            android:text="전주대학교"
+            >
+        </TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="이름"
+            ></TextView>
+        <TextView
+            android:text="정통이"
+            android:background="#00ff00"
+            ></TextView>
+    </TableRow>
+    <TableRow>
+        <Button android:text="저장" ></Button>
+        <Button android:text="취소" ></Button>
+    </TableRow>
 
 </TableLayout>
