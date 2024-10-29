@@ -1,8 +1,9 @@
-package com.example.ex05;
+ package com.example.ex07;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,22 +24,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        View mainLayout = findViewById(R.id.main);
+        RadioButton red = findViewById(R.id.red);
+        RadioButton blue = findViewById(R.id.blue);
 
-        View _colorLayout = findViewById(R.id.colorView);
+//        findViewById(R.id.red).setOnClickListener(v -> mainLayout.setBackgroundColor(0xFFFF0000));
+//        findViewById(R.id.blue).setOnClickListener(v -> mainLayout.setBackgroundColor(0xFF0000FF));
 
-
-        findViewById(R.id.btnRed).setOnClickListener(v -> {
-
-            //_colorLayout.setBackgroundColor(0xffff0000);
-            _colorLayout.setBackgroundColor(Color.rgb(255,0,0));
-
-        });
-
-        findViewById(R.id.btnGreen).setOnClickListener(v -> {
-
-            //_colorLayout.setBackgroundColor(0xff00ff00);
-            _colorLayout.setBackgroundColor(Color.rgb(0,255,0));
-
+        findViewById(R.id.change).setOnClickListener(v -> {
+            if (red.isChecked()) {
+                mainLayout.setBackgroundColor(0xFFFF0000);
+            } else if (blue.isChecked()) {
+                mainLayout.setBackgroundColor(0xFF0000FF);
+            }
         });
 
     }

@@ -1,8 +1,8 @@
-package com.example.ex05;
+package com.example.ex08;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ImageView;
+import android.widget.Switch;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,23 +23,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        ImageView _light = findViewById(R.id.image);
+        _light.setImageResource(R.drawable.off);
 
-        View _colorLayout = findViewById(R.id.colorView);
+        Switch _switch = findViewById(R.id.switch1);
 
-
-        findViewById(R.id.btnRed).setOnClickListener(v -> {
-
-            //_colorLayout.setBackgroundColor(0xffff0000);
-            _colorLayout.setBackgroundColor(Color.rgb(255,0,0));
-
+        _switch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                _light.setImageResource(R.drawable.on);
+            } else {
+                _light.setImageResource(R.drawable.off);
+                }
         });
-
-        findViewById(R.id.btnGreen).setOnClickListener(v -> {
-
-            //_colorLayout.setBackgroundColor(0xff00ff00);
-            _colorLayout.setBackgroundColor(Color.rgb(0,255,0));
-
-        });
-
     }
 }

@@ -6,13 +6,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/main"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:background=""
+        android:background="#ff0000"
+        android:id="@+id/colorView"
+        android:orientation="vertical"
         ></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:id="@+id/btnRed"
+            ></Button>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:id="@+id/btnGreen"
+            ></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <!-- 이것은 TextView에 대한 주석입니다. -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Button"
+            android:background="#00ff00"
+            android:textColor="#00ff00"
+            android:id="@+id/btnMaterial"
+            >
+
+        </Button>
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple Button"
+            android:id="@+id/btnSimple"
+            android:background="#ff0000"
+            android:textColor="#ffffff"
+            ></android.widget.Button>
+
+    </LinearLayout>
 
 
 </LinearLayout>
