@@ -1,6 +1,8 @@
 package com.example.day0902;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,24 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        findViewById(R.id.btnGo).setOnClickListener(v-> {
+            Intent _intent = new Intent(this, MainActivity2.class);
+            startActivity(_intent);
+
+        });
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("LifeCycle", "onPause");
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("LifeCycle", "onResume");
+    }
+
+
 }
