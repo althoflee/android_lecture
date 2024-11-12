@@ -1,6 +1,8 @@
 package com.example.exam10;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,18 @@ public class SecondActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        EditText edReplace = findViewById(R.id.edReplace);
+        edReplace.setText(name);
+
+        findViewById(R.id.btnReplace).setOnClickListener(v -> {
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("returnedData", edReplace.getText().toString());
+            setResult(RESULT_OK, resultIntent);
+            finish();
         });
     }
 }

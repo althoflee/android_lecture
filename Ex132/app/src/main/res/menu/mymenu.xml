@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 첫 번째 메뉴 아이템 -->
+    <item
+        android:id="@+id/blue"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="파란색"
+        app:showAsAction="always" />
+
+    <!-- 두 번째 메뉴 아이템 -->
+    <item
+        android:id="@+id/green"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:title="초록색"
+        app:showAsAction="ifRoom" />
 
 </menu>

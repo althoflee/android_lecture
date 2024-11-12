@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Switch _switch = findViewById(R.id.switch1);
 
         _switch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
+            if (isChecked) { 
                 _light.setImageResource(R.drawable.on);
             } else {
                 _light.setImageResource(R.drawable.off);
