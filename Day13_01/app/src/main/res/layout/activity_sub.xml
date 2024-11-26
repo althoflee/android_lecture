@@ -14,11 +14,22 @@
         android:text="Sub Activity"
         android:textSize="20sp"
         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edMsg"
+        ></EditText>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Goto Home"
         android:id="@+id/btnGotoHome"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMsg"
+        ></TextView>
 
 </LinearLayout>

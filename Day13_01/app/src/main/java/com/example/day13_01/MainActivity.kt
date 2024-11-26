@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         mBtnGoSub.setOnClickListener {
             val _intent = Intent(this,
                 SubActivity::class.java)
+            _intent.putExtra("message", mEdMsg.text.toString())
             mSubActivityResultLauncher.launch(_intent)
 
         }
