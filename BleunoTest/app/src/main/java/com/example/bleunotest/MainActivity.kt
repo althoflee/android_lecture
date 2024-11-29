@@ -434,6 +434,9 @@ class MainActivity : AppCompatActivity() {
                     if (checkSelfPermission(android.Manifest.permission.BLUETOOTH_CONNECT) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
                         permissionToRequest.add(android.Manifest.permission.BLUETOOTH_CONNECT)
                     }
+                    if(checkSelfPermission((android.Manifest.permission.ACCESS_FINE_LOCATION)) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                        permissionToRequest.add(android.Manifest.permission.ACCESS_FINE_LOCATION)
+                    }
                 } else {
                     if (checkSelfPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
                         permissionToRequest.add(android.Manifest.permission.ACCESS_COARSE_LOCATION)
