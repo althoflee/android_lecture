@@ -47,5 +47,25 @@
         android:id="@+id/btnRegister"
         ></Button>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="게임시작"
+        android:id="@+id/btnStart"
+        ></Button>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자입력"
+        android:id="@+id/edGuess"
+        ></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="추측하기"
+        android:id="@+id/btnGuess"
+        ></Button>
+
+
 
 </LinearLayout>
