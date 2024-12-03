@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         mBtnRegister = findViewById(R.id.btnRegister)
 
         mBtnRegister.setOnClickListener {
+            val studentId = mEdStudentId.text.toString()
+            val name = mEdName.text.toString()
+            val passwd = mEdPasswd.text.toString()
 
         }
 
