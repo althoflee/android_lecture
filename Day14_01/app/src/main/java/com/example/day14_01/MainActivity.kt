@@ -52,6 +52,48 @@ class MainActivity : AppCompatActivity() {
             val name = mEdName.text.toString()
             val passwd = mEdPasswd.text.toString()
 
+            CoroutineScope(Dispatchers.IO).launch {
+                val registerUrl =
+                    "$mBaseUrl/register?studentId=$studentId&name=$name&passwd=$passwd&classId=2024_01"
+                val url = URL(registerUrl)
+                val connection = url.openConnection() as HttpURLConnection
+
+                try {
+                    connection.requestMethod = "GET"
+                    connection.setRequestProperty("Content-Type", "text/plain")
+                    connection.setRequestProperty("auth-token","DtqBzT4O")
+
+                    val responseCode = connection.responseCode
+
+                    if (responseCode == HttpURLConnection.HTTP_OK) {
+                        val inputStream = BufferedReader(InputStreamReader(connection.inputStream))
+                        val response = StringBuilder()
+                        var line:String?
+
+                        while(inputStream.readLine().also { line = it } != null) {
+                            response.append(line)
+                        }
+                        inputStream.close()
+
+                        Log.d("MainActivity", response.toString())
+                        withContext(Dispatchers.Main) {
+                            mTvInfo.text = response.toString()
+                        }
+                    }
+                    else {
+                        Log.d("MainActivity", "Error: $responseCode")
+                    }
+
+                }
+                catch (e: Exception) {
+                    e.printStackTrace()
+                }
+                finally {
+                    connection.disconnect()
+                }
+
+            }
+
         }
 
 
