@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.quize24_01
 
 import android.content.Intent
 import android.os.Bundle
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         btnCal = findViewById<Button>(R.id.btnCalculate)
         btnCal.setOnClickListener {
-            val _inputIntent = Intent(this, dlg_cal::class.java)
+            val _inputIntent = Intent(this, R.layout.dlg_cal::class.java)
             _inputIntent.putExtra("msg", radioGroup.toString())
             dlgLauncher.launch(_inputIntent)
 
